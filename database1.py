@@ -22,7 +22,4 @@ class Database:
     def find_user(self, email, password):
         self.cur.execute("SELECT fname, lname FROM users WHERE email = ? AND password = ?", (email, password))
         return self.cur.fetchone()
-    
-    def all_user_e_and_p(self):
-        self.cur.execute("SELECT email and password FROM users")
-        return self.cur.fetchone()
+
